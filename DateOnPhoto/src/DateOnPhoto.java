@@ -8,7 +8,8 @@ import java.util.Date;
 
 public class DateOnPhoto {
     public static void main(String[] args) {
-        File inputFile = new File("C:\\Users\\User\\Desktop\\Normalno\\DateStamper\\DateOnPhoto\\input.jpeg");
+        //File inputFile = new File("C:\\Users\\User\\Desktop\\Normalno\\DateStamper\\DateOnPhoto\\input.jpeg");
+        File inputFile = new File("input.jpeg");
         File outputFile = new File("output.jpg");
 
         try {
