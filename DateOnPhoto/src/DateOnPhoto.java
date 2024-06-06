@@ -8,7 +8,7 @@ import java.util.Date;
 
 public class DateOnPhoto {
     public static void main(String[] args) {
-        //File inputFile = new File("C:\\Users\\User\\Desktop\\Normalno\\DateStamper\\DateOnPhoto\\input.jpeg");
+
         File inputFile = new File("input.jpeg");
         File outputFile = new File("output.jpg");
 
@@ -23,7 +23,7 @@ public class DateOnPhoto {
             BufferedImage imageWithDate = addDateToImage(image, date);
 
             // Сохранение нового изображения
-            ImageIO.write(imageWithDate, "jpg", outputFile);
+            ImageIO.write(imageWithDate, "jpeg", outputFile);
 
             System.out.println("Дата добавлена на фото и сохранена как " + outputFile.getName());
         } catch (IOException e) {
