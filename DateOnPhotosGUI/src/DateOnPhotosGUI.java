@@ -106,7 +106,9 @@ public class DateOnPhotosGUI extends JFrame {
         Graphics2D g2d = image.createGraphics();
 
         // Настройка шрифта и цвета
-        Font font = new Font("Arial", Font.BOLD, 20);
+        //Font font = new Font("Arial", Font.BOLD, 20);
+        int fontSize = image.getHeight() / 20; // 5% от высоты изображения
+        Font font = new Font("Arial", Font.BOLD, fontSize);
         g2d.setFont(font);
         g2d.setColor(Color.WHITE);
 
