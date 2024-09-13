@@ -1,6 +1,6 @@
 //Идеи улучшений:
 // 1. Окно предпрсмотра
-// 2.
+// 2. Каждую фичу выделить в отдельный модуль
 
 import javax.imageio.ImageIO;
 import javax.swing.*;
@@ -15,7 +15,7 @@ import java.util.concurrent.ExecutorService;
 import java.util.concurrent.Executors;
 import java.util.concurrent.TimeUnit;
 
-public class DateOnPhotosGUI extends JFrame {
+public class DatePhoto extends JFrame {
     private DefaultListModel<File> fileListModel;
     private JList<File> fileList;
     private JSpinner dateSpinner;
@@ -23,7 +23,7 @@ public class DateOnPhotosGUI extends JFrame {
     private JSpinner fontSizeSpinner; // Для выбора размера шрифта
     private JComboBox<String> colorComboBox; // Для выбора цвета
 
-    public DateOnPhotosGUI() {
+    public DatePhoto() {
         setTitle("Добавление даты на фото");
         setSize(450, 350); // Размер окна 400x300
         setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
@@ -190,7 +190,7 @@ public class DateOnPhotosGUI extends JFrame {
 
     public static void main(String[] args) {
         SwingUtilities.invokeLater(() -> {
-            DateOnPhotosGUI frame = new DateOnPhotosGUI();
+            DatePhoto frame = new DatePhoto();
             frame.setVisible(true);
         });
     }
