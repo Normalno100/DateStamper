@@ -45,7 +45,8 @@ public class DatePhoto extends JFrame {
         addButton.addActionListener(e -> {
             JFileChooser fileChooser = new JFileChooser();
             fileChooser.setMultiSelectionEnabled(true);
-            fileChooser.setFileFilter(new FileNameExtensionFilter("Изображения", "jpg", "jpeg", "png"));
+            fileChooser.setFileFilter(new FileNameExtensionFilter
+                    ("Изображения", "jpg", "jpeg", "png"));
             int returnValue = fileChooser.showOpenDialog(null);
             if (returnValue == JFileChooser.APPROVE_OPTION) {
                 for (File file : fileChooser.getSelectedFiles()) {
@@ -74,7 +75,8 @@ public class DatePhoto extends JFrame {
 
             for (int i = 0; i < fileListModel.size(); i++) {
                 File inputFile = fileListModel.getElementAt(i);
-                executor.submit(() -> processImage(inputFile, selectedDate, selectedFont, selectedFontSize, selectedColor));
+                executor.submit(() -> processImage
+                        (inputFile, selectedDate, selectedFont, selectedFontSize, selectedColor));
             }
             executor.shutdown();
             try {
@@ -101,9 +103,11 @@ public class DatePhoto extends JFrame {
 
         // Панель для выбора шрифта и размера шрифта
         JPanel fontPanel = new JPanel();
-        fontComboBox = new JComboBox<>(GraphicsEnvironment.getLocalGraphicsEnvironment().getAvailableFontFamilyNames());
+        fontComboBox = new JComboBox<>
+                (GraphicsEnvironment.getLocalGraphicsEnvironment().getAvailableFontFamilyNames());
         fontComboBox.setSelectedItem("Arial"); // По умолчанию Arial
-        fontSizeSpinner = new JSpinner(new SpinnerNumberModel(100, 10, 500, 1)); // Размер шрифта от 10 до 100
+        fontSizeSpinner = new JSpinner
+                (new SpinnerNumberModel(100, 10, 500, 1)); // Размер шрифта от 10 до 100
         fontPanel.add(new JLabel("Шрифт:"));
         fontPanel.add(fontComboBox);
         fontPanel.add(new JLabel("Размер:"));
