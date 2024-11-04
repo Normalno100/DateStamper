@@ -41,7 +41,8 @@ public class DatePhotoENG extends JFrame {
         addButton.addActionListener(e -> {
             JFileChooser fileChooser = new JFileChooser();
             fileChooser.setMultiSelectionEnabled(true);
-            fileChooser.setFileFilter(new FileNameExtensionFilter("Images", "jpg", "jpeg", "png"));
+            fileChooser.setFileFilter(new FileNameExtensionFilter
+                    ("Images", "jpg", "jpeg", "png"));
             int returnValue = fileChooser.showOpenDialog(null);
             if (returnValue == JFileChooser.APPROVE_OPTION) {
                 for (File file : fileChooser.getSelectedFiles()) {
@@ -70,7 +71,8 @@ public class DatePhotoENG extends JFrame {
 
             for (int i = 0; i < fileListModel.size(); i++) {
                 File inputFile = fileListModel.getElementAt(i);
-                executor.submit(() -> processImage(inputFile, selectedDate, selectedFont, selectedFontSize, selectedColor));
+                executor.submit(() -> processImage
+                        (inputFile, selectedDate, selectedFont, selectedFontSize, selectedColor));
             }
             executor.shutdown();
             try {
@@ -97,7 +99,8 @@ public class DatePhotoENG extends JFrame {
 
         // Panel for font and font size selection
         JPanel fontPanel = new JPanel();
-        fontComboBox = new JComboBox<>(GraphicsEnvironment.getLocalGraphicsEnvironment().getAvailableFontFamilyNames());
+        fontComboBox = new JComboBox<>
+                (GraphicsEnvironment.getLocalGraphicsEnvironment().getAvailableFontFamilyNames());
         fontComboBox.setSelectedItem("Arial"); // Default font is Arial
         fontSizeSpinner = new JSpinner(new SpinnerNumberModel(100, 10, 500, 1)); // Font size from 10 to 500
         fontPanel.add(new JLabel("Font:"));
@@ -134,7 +137,8 @@ public class DatePhotoENG extends JFrame {
             String date = sdf.format(selectedDate);
 
             // Add the date to the image
-            BufferedImage imageWithDate = addDateToImage(image, date, selectedFont, selectedFontSize, selectedColor);
+            BufferedImage imageWithDate = addDateToImage
+                    (image, date, selectedFont, selectedFontSize, selectedColor);
 
             // Save the new image
             File outputFile = new File("new_" + inputFile.getName());
