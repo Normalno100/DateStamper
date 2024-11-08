@@ -1,0 +1,13 @@
+<component name="ArtifactManager">
+  <artifact type="jar" name="Date">
+    <output-path>$PROJECT_DIR$/../..</output-path>
+    <root id="archive" name="Date.jar">
+      <element id="directory" name="META-INF">
+        <element id="file-copy" path="$PROJECT_DIR$/DateOnPhotos/src/main/resources/META-INF/MANIFEST.MF" />
+      </element>
+      <element id="module-output" name="DateOnPhoto" />
+      <element id="module-output" name="DatePhoto" />
+      <element id="module-output" name="DateOnPhotos" />
+    </root>
+  </artifact>
+</component>

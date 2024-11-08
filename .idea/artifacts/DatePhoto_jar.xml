@@ -1,0 +1,8 @@
+<component name="ArtifactManager">
+  <artifact type="jar" name="DatePhoto:jar">
+    <output-path>$PROJECT_DIR$/../../DatePhoto_jar</output-path>
+    <root id="archive" name="DatePhoto.jar">
+      <element id="module-output" name="DatePhoto" />
+    </root>
+  </artifact>
+</component>
