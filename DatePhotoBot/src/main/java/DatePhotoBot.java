@@ -159,13 +159,12 @@ public class DatePhotoBot extends TelegramLongPollingBot {
 
     @Override
     public String getBotUsername() {
-        return "DatePhotoBot";
+        return Bot.botName;
     }
 
     @Override
-    public String getBotToken() {
-        return "7557921306:AAFXWCMg1hLVOTbs8H-eZP5KqaMngDuIQQc";
-    }
+    public String getBotToken() {return Bot.botToken; }
+
 
     private static class UserSession {
         private final File photo;
